@@ -1,4 +1,12 @@
 {%- capture product_form_id -%}product-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
+<style>
+  .product-info__accordion--metafields .accordion__content-metafield {
+    display: block;
+  }
+  .accordion__content-metafield {
+    display: none;
+  }
+</style>
 
 <safe-sticky class="product-info">
   {%- for block in section.blocks -%}
@@ -87,7 +95,16 @@
         {%- if block.settings.collapse_content -%}
           {%- if product.description != blank -%}
             {%- capture accordion_title -%}{{ 'product.general.description' | t }}{%- endcapture -%}
+            {%- capture trm_description -%}
+              {{ product.description }}
+            {%- endcapture -%}
+            {%- if trm_description contains '•' -%}
+              {%- assign trm_description = trm_description | replace: '•', '<br>•' -%}
+            {%- endif -%}
+            {%- comment -%}
             {%- capture accordion_content -%}<div class="prose">{{ product.description }}</div>{%- endcapture -%}
+            {%- endcomment -%}
+            {%- capture accordion_content -%}<div class="prose">{{ trm_description }}</div>{%- endcapture -%}
 
             {%- render 'accordion', title: accordion_title, content: accordion_content, class: 'product-info__accordion', block: block -%}
           {%- endif -%}
@@ -103,7 +120,13 @@
 
       {%- when 'variant_picker' -%}
         <div class="product-info__variant-picker" {{ block.shopify_attributes }}>
-          {%- render 'variant-picker', product: product, form_id: product_form_id, update_url: update_url, hide_sold_out_variants: block.settings.hide_sold_out_variants, block: block -%}
+          {%- render 'variant-picker', 
+            product: product, 
+            form_id: product_form_id,
+            update_url: update_url, 
+            hide_sold_out_variants: block.settings.hide_sold_out_variants, 
+            block: block 
+          -%}
         </div>
 
       {%- when 'product_variations' -%}
@@ -147,18 +170,18 @@
                       {%- assign selected = false -%}
                     {%- endif -%}
 
-                    {%- case block.settings.color_mode -%}
-                      {%- when 'color' -%}
-                        {%- render 'swatch' with 'color', href: product_variation.url, value: value, selected: selected -%}
+                    {%- case block.settings.selector_style -%}
+                      {%- when 'swatch' -%}
+                        {%- render 'option-value', type: 'swatch', url: product_variation.url, value: value, selected: selected -%}
 
-                      {%- when 'variant' -%}
-                        {%- render 'swatch' with 'media', href: product_variation.url, value: value, media: product_variation.featured_media, selected: selected, bordered: true -%}
+                      {%- when 'variant_image' -%}
+                        {%- render 'option-value', type: 'thumbnail', url: product_variation.url, value: value, image: product_variation.featured_media, selected: selected, bordered: true -%}
 
                       {%- when 'block' -%}
-                        {%- render 'swatch' with 'block', href: product_variation.url, value: value, selected: selected -%}
+                        {%- render 'option-value', type: 'block', url: product_variation.url, value: value, selected: selected -%}
 
                       {%- when 'block_swatch' -%}
-                        {%- render 'swatch' with 'block', href: product_variation.url, value: value, selected: selected, show_color: true -%}
+                        {%- render 'option-value', type: 'block', url: product_variation.url, value: value, selected: selected, show_swatch: true -%}
                     {%- endcase -%}
                   {%- endfor -%}
                 </div>
@@ -228,9 +251,9 @@
         {%- endif -%}
 
       {%- when 'collapsible_text' -%}
-        {%- if block.settings.title != blank and block.settings.content != blank -%}
-          {%- capture accordion_content -%}<div class="prose">{{ block.settings.content }}</div>{%- endcapture -%}
-          {%- render 'accordion', title: block.settings.title, content: accordion_content, class: 'product-info__accordion', block: block -%}
+        {%- if block.settings.title != blank and block.settings.content != blank or block.settings.page.content != blank -%}
+          {%- capture accordion_content -%}<div class="prose">{{ block.settings.page.content | default: block.settings.content }}</div>{%- endcapture -%}
+          {%- render 'accordion', title: block.settings.title, content: accordion_content, class: 'product-info__accordion product-info__accordion--metafields', block: block -%}
         {%- endif -%}
 
       {%- when 'image' -%}
@@ -239,7 +262,7 @@
             {%- capture sizes -%}{{ block.settings.max_width }}px{%- endcapture -%}
             {%- capture widths -%}{{ block.settings.max_width }}, {{ block.settings.max_width | times: 2 | at_most: block.settings.image.width }}{%- endcapture -%}
             {%- capture style -%}width: {{ block.settings.max_width }}px; {% if block.settings.alignment == 'center' %}margin-inline: auto{% elsif block.settings.alignment == 'end' %}margin-inline-start: auto;{% endif %}{%- endcapture -%}
-            {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', style: style, sizes: sizes, widths: widths -}}
+            {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: style: style, sizes: sizes, widths: widths -}}
           </div>
         {%- endif -%}
 
@@ -320,9 +343,9 @@
         {%- endif -%}
 
       {%- when 'share_buttons' -%}
-        <div class="product-form__share {% if block.settings.alignment == 'center' %}justify-self-center{% elsif block.settings.alignment == 'end' %}justify-self-end{% endif %}" {{ block.shopify_attributes }}>
+        <div class="product-form__share" {{ block.shopify_attributes }}>
           <div class="product-info__share-buttons">
-            <div class="share-buttons">
+            <div class="share-buttons justify-{{ block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' }}">
               <span class="text-subdued">{{- 'general.social.share' | t -}}</span>
 
               <ul class="h-stack" role="list">

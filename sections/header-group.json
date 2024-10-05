@@ -8,8 +8,8 @@
         "message": {
           "type": "message",
           "settings": {
-            "text": "Акційна пропозиція, знижка до -70%",
-            "url": "shopify:\/\/collections\/акція"
+            "text": "Безкоштовна доставка на передплачені замовлення від 1500 грн",
+            "url": "shopify:\/\/policies\/shipping-policy"
           }
         }
       },
@@ -18,22 +18,24 @@
       ],
       "settings": {
         "enable_sticky": false,
-        "text_size": "text-lg",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "text_size": "text-base",
         "navigation_mode": "scrolling",
-        "scrolling_speed": 20,
-        "background": "#f4c3cc",
+        "scrolling_speed": 10,
+        "background": "#35435a",
         "background_gradient": "",
-        "text_color": "#35435a"
+        "text_color": "#ffffff"
       }
     },
     "header": {
       "type": "header",
       "blocks": {
-        "d3192ede-8dbc-48bb-94fa-7f9f13350fc8": {
+        "mega_menu_eRN8Va": {
           "type": "mega_menu",
           "settings": {
             "menu_item": "",
-            "layout": "horizontal_center",
+            "layout": "horizontal",
             "submenu_style": "bold_text",
             "image_heading_1": "",
             "image_link_1": "",
@@ -47,24 +49,21 @@
             "product": "",
             "product_card_background": "",
             "product_card_text_color": "",
-            "promo_content_layout": "grid",
-            "stretch_promo": false,
+            "promo_content_layout": "carousel",
+            "stretch_promo": true,
             "drawer_link_image": "hide"
           }
         }
       },
       "block_order": [
-        "d3192ede-8dbc-48bb-94fa-7f9f13350fc8"
-      ],
-      "custom_css": [
-
+        "mega_menu_eRN8Va"
       ],
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
-        "logo": "shopify:\/\/shop_images\/LOGO.png",
-        "logo_max_width": 185,
-        "logo_mobile_max_width": 125,
+        "logo": "shopify:\/\/shop_images\/LOGO_New.png",
+        "logo_max_width": 220,
+        "logo_mobile_max_width": 155,
         "menu": "moro-menu",
         "sidebar_menu": "",
         "secondary_menu": "",
@@ -77,8 +76,8 @@
         "show_country_flag": false,
         "show_country_name": false,
         "transparent_header_text_color": "#ffffff",
-        "reduce_padding": true,
-        "background_opacity": 31,
+        "reduce_padding": false,
+        "background_opacity": 38,
         "background_blur_radius": 4
       }
     }

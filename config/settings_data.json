@@ -9,7 +9,6 @@
     "block_shadow_opacity": 0,
     "block_shadow_vertical_offset": 0,
     "icon_stroke_width": 1.4,
-    "button_style": "fill",
     "button_hover_effect": "reverse",
     "background": "#ffffff",
     "text_color": "#35435a",
@@ -24,66 +23,71 @@
     "primary_button_text_color": "#ffffff",
     "secondary_button_background": "#dbe2e9",
     "secondary_button_text_color": "#35435a",
+    "product_card_background": "#ffffff",
     "product_card_text_color": "#35435a",
-    "product_on_sale_accent": "#e34f4f",
     "product_sold_out_badge_background": "#f4c3cc",
     "product_primary_badge_background": "#35435a",
     "heading_font": "sans-serif",
     "heading_font_size": "small",
-    "heading_text_transform": "normal",
-    "heading_letter_spacing": -1,
+    "heading_letter_spacing": 0,
     "text_font": "sans-serif",
     "text_font_size_mobile": 14,
     "text_font_size_desktop": 12,
+    "text_font_letter_spacing": 0,
     "currency_code_enabled": true,
     "show_page_transition": true,
+    "reduce_drawer_animation": false,
     "reduce_menu_animation": true,
-    "heading_apparition": "fade",
-    "color_swatch_style": "rectangle",
+    "heading_apparition": "none",
+    "show_vendor": false,
     "show_secondary_image": true,
     "show_quick_buy": true,
     "show_product_rating": true,
-    "product_color_display": "hide",
+    "product_color_display": "variant",
     "product_image_aspect_ratio": "square",
-    "product_info_alignment": "center",
+    "product_info_alignment": "start",
+    "np_api_key": "5caf54a142f3a6c45976034b54573732",
+    "atc_selector": "buy-buttons .button",
+    "drawer_widget_parent_selector": "cart-drawer form.buy-buttons",
+    "drawer_button_selector": "cart-drawer [name='checkout']",
+    "cart_form_selector": ".cart-order__recap .cart-form",
+    "cart_widget_parent_selector": ".cart-order__recap .cart-form",
+    "cart_button_selector": ".cart-order__recap .cart-form [name='checkout']",
     "cart_type": "drawer",
     "cart_icon": "shopping_basket",
+    "cart_empty_button_link": "shopify:\/\/collections\/moro-all-goods",
     "cart_show_free_shipping_threshold": true,
-    "cart_free_shipping_threshold": 3000,
+    "cart_free_shipping_threshold": "1500",
     "social_facebook": "https:\/\/www.facebook.com\/moro.ukraine",
-    "social_twitter": "",
     "social_instagram": "https:\/\/www.instagram.com\/moro.ukraine\/",
-    "social_youtube": "https:\/\/m.youtube.com\/@MORO-ic1mq\/featured",
+    "social_youtube": "https:\/\/www.youtube.com\/@MOROUkraine",
     "social_tiktok": "https:\/\/www.tiktok.com\/@moro.ukraine?_t=8eHHb9MreGk",
-    "favicon": "shopify:\/\/shop_images\/moro_bg_square_JPEG_200_200.jpg",
-    "checkout_header_image": "shopify:\/\/shop_images\/Peinture_mur_boiserie_Creme_de_couleur_DULUX_VALENTINE_galet_poli_satin_2_5l.jpg",
-    "checkout_logo_image": "shopify:\/\/shop_images\/LOGO.png",
-    "checkout_logo_position": "center",
-    "checkout_logo_size": "large",
-    "checkout_body_background_color": "#dbe2e9",
-    "checkout_sidebar_background_color": "#ffffff",
+    "favicon": "shopify:\/\/shop_images\/MORO_200_200_sque.png",
     "checkout_accent_color": "#35435a",
     "checkout_button_color": "#35435a",
-    "checkout_error_color": "#f4c3cc",
-    "sections": {
-      "main-gift-card": {
-        "type": "main-gift-card",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/moro_bg_square_JPEG.jpg",
-          "show_qr_code": true,
-          "amount_background": "#dbe2e9",
-          "amount_text_color": "#35435a"
-        }
-      }
-    },
     "content_for_index": [
 
     ],
     "blocks": {
-      "5918445685253060206": {
-        "type": "shopify:\/\/apps\/bundler\/blocks\/bundler-script-append\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
         "disabled": false,
         "settings": {
+          "show_preview_data": true
+        }
+      },
+      "15683396631634586217": {
+        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#35435a",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#35435a",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": "👋 Привіт, напишіть нам, якщо у вас виникнуть запитання. \nМи раді допомогти! 🐳"
         }
       }
     }
@@ -112,7 +116,6 @@
       "heading_font_size": "large",
       "heading_letter_spacing": -2,
       "text_font": "din_next_n4",
-      "show_page_transition": true,
       "cart_icon": "shopping_basket",
       "heading_apparition": "split_fade",
       "product_color_display": "swatch",

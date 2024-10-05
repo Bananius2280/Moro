@@ -52,7 +52,7 @@
                 {%- if block.settings.menu != blank -%}
                   <div class="footer__block footer__block--menu" {{ block.shopify_attributes }}>
                     {%- if block.settings.show_menu_title -%}
-                      <p class="bold">{{ block.settings.menu.title }}</p>
+                      <p class="bold">{{ block.settings.menu_title | default: block.settings.menu.title }}</p>
                     {%- endif -%}
 
                     <ul class="v-stack gap-3" role="list">
@@ -276,6 +276,12 @@
           "id": "show_menu_title",
           "label": "Show menu title",
           "default": true
+        },
+        {
+          "type": "inline_richtext",
+          "id": "menu_title",
+          "label": "Menu title",
+          "info": "Replaces the default menu title"
         }
       ]
     },

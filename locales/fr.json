@@ -84,7 +84,7 @@
       "view_in_space": "Afficher dans votre espace",
       "taxes_included": "Taxes inclues",
       "taxes_excluded": "Taxes exclues",
-      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Frais d'envoi calculés<\/a> à la caisse",
+      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Frais d'envoi calculés<\/a> au paiement",
       "size_chart": "Guide des tailles",
       "available_colors_count": {
         "one": "{{ count }} couleur",
@@ -376,7 +376,7 @@
     "issued": {
       "remaining_amount": "Montant restant",
       "out_of_html": "sur {{ initial_value }}",
-      "redeem_instructions": "Rentrez code code à la caisse pour utiliser votre carte cadeau :",
+      "redeem_instructions": "Rentrez ce code à l'étape de paiement pour utiliser votre carte cadeau :",
       "code": "Code de la carte cadeau",
       "expires_on": "Expires on: {{ expires_on }}",
       "expired": "Votre carte cadeau a expiré ou a été désactivé.",
@@ -386,6 +386,7 @@
       "checkbox": "Je veux envoyer ce produit comme cadeau",
       "email_label": "E‑mail du destinataire",
       "name_label": "Nom du destinataire (facultatif)",
+      "send_on_label": "Envoyer le (facultatif)",
       "message_label": "Message (facultatif)"
     }
   },

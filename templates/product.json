@@ -3,13 +3,7 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "disabled": true,
-          "settings": {
-          }
-        },
-        "5bad7b4e-3e2e-41a9-bee1-3b62cf0269c2": {
+        "sku_dFdGgw": {
           "type": "sku",
           "settings": {
           }
@@ -17,12 +11,11 @@
         "title": {
           "type": "title",
           "settings": {
-            "heading_tag": "h3"
+            "heading_tag": "h4"
           }
         },
         "badges": {
           "type": "badges",
-          "disabled": true,
           "settings": {
           }
         },
@@ -32,31 +25,25 @@
             "show_taxes_notice": false
           }
         },
-        "rating": {
-          "type": "rating",
+        "okendo_star_rating_A3XUDW": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
-            "show_empty": true
+            "product": "{{product}}"
           }
         },
-        "payment_terms": {
-          "type": "payment_terms",
-          "disabled": true,
+        "product_variations_JckCh8": {
+          "type": "product_variations",
           "settings": {
+            "option_name": "Варіанти",
+            "option_value_metafield": "{{ product.metafields.custom.color_variants.value }}",
+            "products": "{{ product.metafields.custom.color_product.value }}",
+            "selector_style": "variant_image"
           }
         },
-        "separator": {
-          "type": "separator",
+        "inventory_EBj3Ne": {
+          "type": "inventory",
           "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "stack_blocks": true,
-            "selector_mode": "block",
-            "color_mode": "color",
-            "size_chart_page": ""
+            "low_inventory_threshold": 0
           }
         },
         "quantity_selector": {
@@ -64,15 +51,26 @@
           "settings": {
           }
         },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": true,
+            "show_payment_button": false,
             "show_gift_card_recipient": true,
             "atc_button_background": "",
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
+          }
+        },
+        "share_buttons_VKX9NV": {
+          "type": "share_buttons",
+          "settings": {
+            "alignment": "start"
           }
         },
         "description": {
@@ -81,48 +79,62 @@
             "collapse_content": true
           }
         },
-        "d1171695-e542-47a3-8e38-7f8953424cdc": {
+        "collapsible_text_ckPirT": {
           "type": "collapsible_text",
           "settings": {
             "title": "Характеристики",
-            "content": "<h4>{{ product.metafields.trm_1c.material_korpusu.value }}<\/h4><h4>{{ product.metafields.trm_1c.obem.value }}<\/h4>"
+            "content": "<p> <\/p>",
+            "page": ""
           }
         },
-        "bcbe8211-a1ad-4936-bfaa-3a873462525b": {
-          "type": "liquid",
+        "variant_picker": {
+          "type": "variant_picker",
           "settings": {
-            "liquid": ""
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
           }
         },
-        "d8b624c4-9ddf-4022-9907-1ff62236c2be": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+        "offer_h8ytd7": {
+          "type": "offer",
           "settings": {
+            "text_alignment": "center",
+            "icon_position": "stacked",
+            "icon": "picto-truck",
+            "icon_width": 20,
+            "title": "Безкоштовна доставка",
+            "content": "<h5>на передплачені замовлення<br\/> від 1500грн<\/h5>",
+            "background": "#eaf2ed",
+            "text_color": "#00a341"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "5bad7b4e-3e2e-41a9-bee1-3b62cf0269c2",
+        "sku_dFdGgw",
         "title",
         "badges",
         "price",
-        "rating",
-        "payment_terms",
-        "separator",
-        "variant_picker",
+        "okendo_star_rating_A3XUDW",
+        "product_variations_JckCh8",
+        "inventory_EBj3Ne",
         "quantity_selector",
+        "payment_terms",
         "buy_buttons",
+        "share_buttons_VKX9NV",
         "description",
-        "d1171695-e542-47a3-8e38-7f8953424cdc",
-        "bcbe8211-a1ad-4936-bfaa-3a873462525b",
-        "d8b624c4-9ddf-4022-9907-1ff62236c2be"
+        "collapsible_text_ckPirT",
+        "variant_picker",
+        "offer_h8ytd7"
       ],
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "show_fixed_add_to_cart": true,
-        "desktop_media_width": 40,
+        "desktop_media_width": 65,
         "desktop_media_layout": "carousel_thumbnails_bottom",
-        "mobile_media_size": "contained",
+        "mobile_media_size": "expanded",
         "mobile_carousel_control": "dots",
         "enable_video_autoplay": true,
         "enable_video_looping": true,
@@ -135,21 +147,94 @@
         "input_text_color": ""
       }
     },
+    "tabs_fxcV7d": {
+      "type": "tabs",
+      "blocks": {
+        "tab_dqjJ3d": {
+          "type": "tab",
+          "settings": {
+            "title": "",
+            "content": "",
+            "page": "{{ product.metafields.custom.tab.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "tab_dqjJ3d"
+      ],
+      "settings": {
+        "full_width": false,
+        "content_size": "medium",
+        "subheading": "",
+        "title": "",
+        "text_alignment": "center",
+        "first_tab_open": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "recommendations_count": 3,
+        "recommendations_count": 6,
         "products": [
 
         ],
-        "full_width": true,
-        "stack_products": true,
-        "show_progress_bar": false,
+        "full_width": false,
+        "stack_products": false,
+        "show_progress_bar": true,
         "products_per_row_mobile": "1",
-        "products_per_row_desktop": 2,
+        "products_per_row_desktop": 3,
         "subheading": "",
-        "title": "Вам також сподобається",
-        "content": "",
+        "title": "",
+        "content": "<h5>Також сподобається<\/h5>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "1713693187f97c1c68": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_EJXae6": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_EJXae6"
+      ],
+      "settings": {
+        "full_width": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "recently_viewed_products_QWVy6q": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "full_width": true,
+        "products_count": 6,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": "<h3>Переглядали<\/h3>",
         "background": "",
         "background_gradient": "",
         "text_color": "",
@@ -162,6 +247,9 @@
   },
   "order": [
     "main",
-    "related-products"
+    "tabs_fxcV7d",
+    "related-products",
+    "1713693187f97c1c68",
+    "recently_viewed_products_QWVy6q"
   ]
 }

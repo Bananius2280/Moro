@@ -13,7 +13,6 @@
         "cart_note": {
           "type": "cart_note",
           "settings": {
-            "max_length": 0
           }
         },
         "checkout_button": {

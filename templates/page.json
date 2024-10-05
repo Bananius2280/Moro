@@ -3,7 +3,6 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "content_width": "80ch"
       }
     }
   },

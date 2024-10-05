@@ -4,21 +4,20 @@
   "sections": {
     "newsletter-popup": {
       "type": "newsletter-popup",
-      "disabled": true,
       "settings": {
-        "apparition_delay": 5,
+        "apparition_delay": 7,
         "show_only_on_index": true,
         "show_only_for_visitors": true,
         "show_only_once": true,
-        "title": "Signup for our newsletter",
-        "button_text": "Subscribe",
-        "subtext": "Describe what your customers will receive when subscribing to your newsletter."
+        "title": "Отримай знижку -20% на першу покупку",
+        "button_text": "Підписатись",
+        "subtext": "<strong>Підпишись на новини та спеціальні пропозиції та отримай ЗНИЖКУ -20%  на першу покупку на замовлення від 300грн<\/strong>"
       }
     },
     "privacy-banner": {
       "type": "privacy-banner",
       "settings": {
-        "privacy_bar_title": "Cookie policy",
+        "privacy_bar_title": "Політика Cookie",
         "privacy_bar_content": "<p>Ми використовуємо файли cookie та подібні технології, щоб забезпечити найкращий досвід роботи на нашому веб-сайті. Для отримання додаткової інформації зверніться до нашої Політики конфіденційності.<\/p>"
       }
     },
@@ -31,7 +30,9 @@
         "show_checkout_button": true,
         "recommendations_title": "Найкраща пропозиція",
         "products": [
-          "smart-led-лампа-m-9079"
+          "smart-led-лампа-m-9079-1",
+          "дзеркало-кишенькове-m-9568-w",
+          "вітальна-3d-листівка-до-дня-народження-червона-m-9570-2"
         ],
         "product_card_background": "#f2f2f2",
         "product_card_text_color": ""
@@ -40,8 +41,8 @@
     "search-drawer": {
       "type": "search-drawer",
       "settings": {
-        "full_width": true,
-        "show_article_category": true,
+        "full_width": false,
+        "show_article_category": false,
         "search_menu": "main-menu",
         "search_menu_show_title": false
       }

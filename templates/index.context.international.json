@@ -1,0 +1,13 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "international"
+  },
+  "sections": {
+    "featured_collection_GtUGfr": {
+      "settings": {
+        "link_text": "Всі товри"
+      }
+    }
+  }
+}
