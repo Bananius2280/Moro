@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Land",
-      "language": "Sprache"
+      "language": "Sprache",
+      "change_country_accessibility_text": "Land oder Währung ändern",
+      "change_language_accessibility_text": "Sprache ändern"
     },
     "privacy_bar": {
       "accept": "Akzeptieren",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Kundenkontoseite",
-      "open_menu": "Navigationsmenü öffnen",
-      "open_search": "Suche öffnen",
-      "open_account": "Kundenkontoseite öffnen",
-      "open_cart": "Warenkorb öffnen"
+      "account": "Konto",
+      "login": "Anmelden",
+      "menu": "Menü",
+      "search": "Suche",
+      "cart": "Warenkorb"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Anzahl",
       "increase_quantity": "Anzahl erhöhen",
-      "decrease_quantity": "Anzahl verringern"
+      "decrease_quantity": "Anzahl verringern",
+      "minimum_of": "Minimum von {{ min }}",
+      "maximum_of": "Maximum von {{ max }}",
+      "increment_of": "Schritt von {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Volumenabhängige Preisgestaltung",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "bei {{ price }}\/Stück"
     },
     "rating_count": {
       "zero": "Keine Bewertungen",
@@ -297,6 +307,10 @@
     "general": {
       "title": "Warenkorb",
       "empty": "Dein Warenkorb ist leer",
+      "item_count": {
+        "one": "{{ count }} Artikel",
+        "other": "{{ count }} Artikel"
+      },
       "continue_shopping": "Weiter einkaufen",
       "weight": "Gewicht",
       "subtotal": "Zwischensumme",
@@ -320,7 +334,8 @@
       "change_quantity": "Anzahl ändern",
       "increase_quantity": "Anzahl erhöhen",
       "decrease_quantity": "Anzahl verringern",
-      "remove": "Entfernen"
+      "remove": "Entfernen",
+      "remove_with_title": "Entfernen {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Füge deiner Bestellung Artikel im Wert von {{ remaining_amount }} hinzu und erhalte kostenlosen Versand!",

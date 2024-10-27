@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Šalis",
-      "language": "Kalba"
+      "language": "Kalba",
+      "change_country_accessibility_text": "Keisti šalį ar valiutą",
+      "change_language_accessibility_text": "Keisti kalbą"
     },
     "privacy_bar": {
       "accept": "Priimti",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Paskyros",
-      "open_menu": "Atidaryti naršymo meniu",
-      "open_search": "Atidaryti paiešką",
-      "open_account": "Atidaryti paskyros puslapį",
-      "open_cart": "Atidaryti krepšelį"
+      "account": "Paskyra",
+      "login": "Prisijungti",
+      "menu": "Meniu",
+      "search": "Paieška",
+      "cart": "Krepšelis"
     }
   },
   "product": {
@@ -105,7 +107,15 @@
     "quantity": {
       "label": "Kiekis",
       "increase_quantity": "Padidinti kiekį",
-      "decrease_quantity": "Sumažinti kiekį"
+      "decrease_quantity": "Sumažinti kiekį",
+      "minimum_of": "Minimali vertė {{ min }}",
+      "maximum_of": "Maksimali vertė {{ max }}",
+      "increment_of": "Priedas {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Kiekybinė kainodara",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "po {{ price }}\/vnt."
     },
     "rating_count": {
       "zero": "{{ count }} peržiūrų",
@@ -302,6 +312,11 @@
     "general": {
       "title": "Krepšelis",
       "empty": "Jūsų krepšelis yra tuščias",
+      "item_count": {
+        "one": "{{ count }} prekė",
+        "few": "{{ count }} prekės",
+        "other": "{{ count }} prekių"
+      },
       "continue_shopping": "Tęsti apsipirkimą",
       "weight": "Svoris",
       "subtotal": "Tarpinė suma",
@@ -325,7 +340,8 @@
       "change_quantity": "Keisti kiekį",
       "increase_quantity": "Padidinti kiekį",
       "decrease_quantity": "Sumažinti kiekį",
-      "remove": "Pašalinti"
+      "remove": "Pašalinti",
+      "remove_with_title": "Pašalinti {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Išleiskite dar {{ remaining_amount }}, kad siuntimas būtų nemokamas!",

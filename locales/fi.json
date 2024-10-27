@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Maa",
-      "language": "Kieli"
+      "language": "Kieli",
+      "change_country_accessibility_text": "Vaihda maa tai valuutta",
+      "change_language_accessibility_text": "Vaihda kieli"
     },
     "privacy_bar": {
       "accept": "Hyväksy",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Tilisivu",
-      "open_menu": "Avaa navigointivalikko",
-      "open_search": "Avaa haku",
-      "open_account": "Avaa tilisivu",
-      "open_cart": "Avaa ostoskori"
+      "account": "Tili",
+      "login": "Kirjaudu",
+      "menu": "Valikko",
+      "search": "Haku",
+      "cart": "Ostoskori"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Määrä",
       "increase_quantity": "Lisää määrää",
-      "decrease_quantity": "Vähennä määrää"
+      "decrease_quantity": "Vähennä määrää",
+      "minimum_of": "Vähintään {{ min }}",
+      "maximum_of": "Enintään {{ max }}",
+      "increment_of": "Lisäys {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Volyymihinnoittelu",
+      "minimum": "Yli {{ quantity }}",
+      "price_at_each": "{{ price }}\/kpl"
     },
     "rating_count": {
       "zero": "Ei arvosteluja",
@@ -297,6 +307,10 @@
     "general": {
       "title": "Ostoskori",
       "empty": "Ostoskorisi on tyhjä",
+      "item_count": {
+        "one": "{{ count }} tuote",
+        "other": "{{ count }} tuotetta"
+      },
       "continue_shopping": "Jatka ostoksia",
       "weight": "Paino",
       "subtotal": "Välisumma",
@@ -320,7 +334,8 @@
       "change_quantity": "Muuta määrää",
       "increase_quantity": "Lisää määrää",
       "decrease_quantity": "Vähennä määrää",
-      "remove": "Poista"
+      "remove": "Poista",
+      "remove_with_title": "Poista {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Käytä vielä {{ remaining_amount }}, niin saat ilmaisen toimituksen!",

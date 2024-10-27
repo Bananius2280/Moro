@@ -47,7 +47,7 @@ Supported variables
   {%- assign card_class = card_class | append: 'product-card--show-secondary-media' -%}
 {%- endif -%}
 
-<product-card handle="{{ product.handle | escape }}" {% if reveal %}reveal-js{% endif %} {% render 'surface', class: card_class, background: card_background, text_color: card_text_color %}>
+<product-card handle="{{ product.handle | escape }}" {% if reveal and settings.stagger_products_apparition %}reveal-js{% endif %} {% render 'surface', class: card_class, background: card_background, text_color: card_text_color %}>
   {%- comment -%}
   --------------------------------------------------------------------------------------------------------------------
   PRODUCT BADGES
@@ -55,7 +55,7 @@ Supported variables
   {%- endcomment -%}
 
   {%- if show_badges and product.media.size > 0 -%}
-    {%- render 'product-badges', product: product, class: 'product-card__badge-list' -%}
+    {%- render 'product-badges', product: product, context: 'card', class: 'product-card__badge-list' -%}
   {%- endif -%}
 
   {%- comment -%}
@@ -180,8 +180,7 @@ Supported variables
       {%- for color_label in color_label_list -%}
         {%- if product.options_by_name[color_label] != blank -%}
           {%- assign product_option = product.options_by_name[color_label] -%}
-          {%- capture name -%}swatch-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
-
+          
           <div class="product-card__aside">
             {%- case settings.product_color_display -%}
               {%- when 'count' -%}
@@ -189,19 +188,13 @@ Supported variables
 
               {%- when 'swatch' -%}
                 <fieldset class="product-card__swatch-list h-stack {% if settings.color_swatch_style == 'rectangle' %}gap-2.5{% else %}gap-0.5{% endif %}" data-option-position="{{ product_option.position }}">
+                  <legend class="sr-only">{{ product_option.name }}</legend>
+
+                  {%- capture param_name -%}swatch-{{ quick_buy_context }}-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
+
                   {%- liquid
                     for option_value in product_option.values limit: 4
-                      if forloop.first or product.selected_or_first_available_variant.matched and option_value == product_option.selected_value
-                        assign selected = true
-                      else
-                        assign selected = false
-                      endif
-  
-                      if option_value.swatch != nil
-                        render 'option-value', type: 'swatch', swatch: option_value.swatch, value: option_value, name: name, selected: selected, size: 'sm'
-                      else
-                        render 'option-value', type: 'swatch', value: option_value, name: name, selected: selected, size: 'sm'
-                      endif
+                      render 'option-value', type: 'swatch', option_value: option_value, param_name: param_name, option_position: product_option.position, output_variant_media: true, size: 'sm'
                     endfor
                   -%}
 
@@ -212,6 +205,10 @@ Supported variables
 
               {%- when 'variant' -%}
                 <fieldset class="product-card__variant-list" data-option-position="{{ product_option.position }}">
+                  <legend class="sr-only">{{ product_option.name }}</legend>
+                  
+                  {%- capture param_name -%}swatch-{{ quick_buy_context }}-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
+
                   {%- for option_value in product_option.values limit: 4 -%}
                     {%- if forloop.first or option_value.variant.matched and option_value == product_option.selected_value -%}
                       {%- assign selected = true -%}
@@ -219,7 +216,7 @@ Supported variables
                       {%- assign selected = false -%}
                     {%- endif -%}
 
-                    {%- render 'option-value', type: 'thumbnail', image: option_value.variant.featured_media, value: option_value, name: name, size: 'sm', selected: selected -%}
+                    {%- render 'option-value', type: 'thumbnail', image: option_value.variant.featured_media, option_value: option_value, param_name: param_name, size: 'sm', output_variant_media: true, selected: selected -%}
                   {%- endfor -%}
 
                   {%- if product_option.values.size > 4 -%}

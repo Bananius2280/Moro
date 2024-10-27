@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "国\/地域",
-      "language": "言語"
+      "language": "言語",
+      "change_country_accessibility_text": "国または通貨を変更",
+      "change_language_accessibility_text": "言語を変更"
     },
     "privacy_bar": {
       "accept": "許可する",
@@ -59,10 +61,10 @@
   "header": {
     "general": {
       "account": "アカウント",
-      "open_menu": "メニューを開く",
-      "open_search": "検索を開く",
-      "open_account": "アカウントページに移動する",
-      "open_cart": "カートを開く"
+      "login": "ログイン",
+      "menu": "メニュー",
+      "search": "検索",
+      "cart": "カート"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "数量",
       "increase_quantity": "数量を増やす",
-      "decrease_quantity": "数量を減らす"
+      "decrease_quantity": "数量を減らす",
+      "minimum_of": "{{ min }}の最小",
+      "maximum_of": "{{ max }}の最大",
+      "increment_of": "{{ step }}の増分"
+    },
+    "volume_pricing": {
+      "title": "量による価格",
+      "minimum": "{{ quantity }}個以上",
+      "price_at_each": "{{ price }}\/ユニットで"
     },
     "rating_count": {
       "zero": "{{ count }}件",
@@ -297,6 +307,9 @@
     "general": {
       "title": "カート",
       "empty": "カートが空です",
+      "item_count": {
+        "other": "{{ count }}個のアイテム"
+      },
       "continue_shopping": "ショッピングを開始する",
       "weight": "重量",
       "subtotal": "小計",
@@ -320,7 +333,8 @@
       "change_quantity": "数量を変更する",
       "increase_quantity": "数量を増やす",
       "decrease_quantity": "数量を減らす",
-      "remove": "削除"
+      "remove": "削除",
+      "remove_with_title": "{{ title }}を削除"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "{{ remaining_amount }} 以上のお買い物で、送料が無料になります！",

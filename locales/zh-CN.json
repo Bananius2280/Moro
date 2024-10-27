@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "国家\/地区",
-      "language": "语言"
+      "language": "语言",
+      "change_country_accessibility_text": "更改国家或货币",
+      "change_language_accessibility_text": "更改语言"
     },
     "privacy_bar": {
       "accept": "接受",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "打开账户页面",
-      "open_menu": "打开导航菜单",
-      "open_search": "打开搜索",
-      "open_account": "打开账户页面",
-      "open_cart": "打开购物车"
+      "account": "账户",
+      "login": "登录",
+      "menu": "菜单",
+      "search": "搜索",
+      "cart": "购物车"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "数量",
       "increase_quantity": "增加数量",
-      "decrease_quantity": "减少数量"
+      "decrease_quantity": "减少数量",
+      "minimum_of": "最小值 {{ min }}",
+      "maximum_of": "最大值 {{ max }}",
+      "increment_of": "增量 {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "批量定价",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "{{ price }}\/件"
     },
     "rating_count": {
       "zero": "无评价",
@@ -297,6 +307,9 @@
     "general": {
       "title": "购物车",
       "empty": "您的购物车为空",
+      "item_count": {
+        "other": "{{ count }} 件商品"
+      },
       "continue_shopping": "继续购物",
       "weight": "重量",
       "subtotal": "小计",
@@ -320,7 +333,8 @@
       "change_quantity": "更改数量",
       "increase_quantity": "增加数量",
       "decrease_quantity": "减少数量",
-      "remove": "移除"
+      "remove": "移除",
+      "remove_with_title": "移除{{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "再消费 {{ remaining_amount }} 可包邮！",

@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Land",
-      "language": "Sprog"
+      "language": "Sprog",
+      "change_country_accessibility_text": "Skift land eller valuta",
+      "change_language_accessibility_text": "Skift sprog"
     },
     "privacy_bar": {
       "accept": "Accepter",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Kontoside",
-      "open_menu": "Åbn navigationsmenu",
-      "open_search": "Åbn søgefunktion",
-      "open_account": "Åbn kontoside",
-      "open_cart": "Åbn indkøbskurv"
+      "account": "Konto",
+      "login": "Log ind",
+      "menu": "Menu",
+      "search": "Søg",
+      "cart": "Kurv"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Antal",
       "increase_quantity": "Øg antal",
-      "decrease_quantity": "Sænk antal"
+      "decrease_quantity": "Sænk antal",
+      "minimum_of": "Minimum af {{ min }}",
+      "maximum_of": "Maksimum af {{ max }}",
+      "increment_of": "Stigning på {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Mængderabat",
+      "minimum": "Mere end {{ quantity }}",
+      "price_at_each": "til {{ price }}\/stk"
     },
     "rating_count": {
       "zero": "Ingen anmeldelser",
@@ -297,6 +307,10 @@
     "general": {
       "title": "Indkøbskurv",
       "empty": "Din indkøbskurv er tom",
+      "item_count": {
+        "one": "{{ count }} vare",
+        "other": "{{ count }} varer"
+      },
       "continue_shopping": "Fortsæt med at handle",
       "weight": "Vægt",
       "subtotal": "Subtotal",
@@ -320,7 +334,8 @@
       "change_quantity": "Ændr antal",
       "increase_quantity": "Øg antal",
       "decrease_quantity": "Sænk antal",
-      "remove": "Fjern"
+      "remove": "Fjern",
+      "remove_with_title": "Fjern {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Brug {{ remaining_amount }} mere og få gratis levering!",

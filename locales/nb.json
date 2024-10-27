@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Land",
-      "language": "Språk"
+      "language": "Språk",
+      "change_country_accessibility_text": "Endre land eller valuta",
+      "change_language_accessibility_text": "Endre språk"
     },
     "privacy_bar": {
       "accept": "Godta",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Profil",
-      "open_menu": "Åpne navigeringsmeny",
-      "open_search": "Åpne søk",
-      "open_account": "Åpne kontoside",
-      "open_cart": "Åpne handlekurv"
+      "account": "Konto",
+      "login": "Logg inn",
+      "menu": "Meny",
+      "search": "Søk",
+      "cart": "Handlekurv"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Antall",
       "increase_quantity": "Øk antall",
-      "decrease_quantity": "Reduser antall"
+      "decrease_quantity": "Reduser antall",
+      "minimum_of": "Minimum på {{ min }}",
+      "maximum_of": "Maksimum på {{ max }}",
+      "increment_of": "Økning på {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Volumprissetting",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "til {{ price }}\/pr. stk"
     },
     "rating_count": {
       "zero": "Ingen vurderinger",
@@ -297,6 +307,10 @@
     "general": {
       "title": "Handlekurv",
       "empty": "Handlekurven din er tom",
+      "item_count": {
+        "one": "{{ count }} vare",
+        "other": "{{ count }} varer"
+      },
       "continue_shopping": "Fortsett shoppingen",
       "weight": "Vekt",
       "subtotal": "Nettobeløp",
@@ -320,7 +334,8 @@
       "change_quantity": "Endre antall",
       "increase_quantity": "Øk antall",
       "decrease_quantity": "Reduser antall",
-      "remove": "Fjern"
+      "remove": "Fjern",
+      "remove_with_title": "Fjern {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Bruk {{ remaining_amount }} til og få gratis frakt!",

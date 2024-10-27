@@ -217,6 +217,7 @@ note that this may have impact on different places.
      * ---------------------------------------------------------------------
      */
 
+    --stagger-products-reveal-opacity: {% if settings.stagger_products_apparition %}0{% else %}1{% endif %};
     --cursor-close-svg-url: url({{ 'cursor-close.svg' | asset_url }});
     --cursor-zoom-in-svg-url: url({{ 'cursor-zoom-in.svg' | asset_url }});
     --cursor-zoom-out-svg-url: url({{ 'cursor-zoom-out.svg' | asset_url }});

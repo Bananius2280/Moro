@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Kraj",
-      "language": "Język"
+      "language": "Język",
+      "change_country_accessibility_text": "Zmień kraj lub walutę",
+      "change_language_accessibility_text": "Zmień język"
     },
     "privacy_bar": {
       "accept": "Zgoda",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Konta",
-      "open_menu": "Otwórz menu nawigacji",
-      "open_search": "Otwórz wyszukiwarkę",
-      "open_account": "Otwórz stronę konta",
-      "open_cart": "Otwórz koszyk"
+      "account": "Konto",
+      "login": "Zaloguj się",
+      "menu": "Menu",
+      "search": "Szukaj",
+      "cart": "Koszyk"
     }
   },
   "product": {
@@ -106,7 +108,15 @@
     "quantity": {
       "label": "Ilość",
       "increase_quantity": "Zwiększ ilość",
-      "decrease_quantity": "Zmniejsz ilość"
+      "decrease_quantity": "Zmniejsz ilość",
+      "minimum_of": "Minimum {{ min }}",
+      "maximum_of": "Maksimum {{ max }}",
+      "increment_of": "Przyrost o {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Ceny zależne od wolumenu",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "{{ price }}\/szt."
     },
     "rating_count": {
       "zero": "Brak opinii",
@@ -304,6 +314,12 @@
     "general": {
       "title": "Koszyk",
       "empty": "Twój koszyk jest pusty",
+      "item_count": {
+        "one": "{{ count }} przedmiot",
+        "few": "{{ count }} przedmioty",
+        "many": "{{ count }} przedmiotów",
+        "other": "{{ count }} przedmiotu"
+      },
       "continue_shopping": "Kontynuuj zakupy",
       "weight": "Waga",
       "subtotal": "Wartość produktów",
@@ -327,7 +343,8 @@
       "change_quantity": "Zmień ilość",
       "increase_quantity": "Zmniejsz ilość",
       "decrease_quantity": "Zwiększ ilość",
-      "remove": "Usuń"
+      "remove": "Usuń",
+      "remove_with_title": "Usuń {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Wydaj jeszcze {{ remaining_amount }}, aby uzyskać bezpłatną dostawę!",

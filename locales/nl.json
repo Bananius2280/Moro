@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Land",
-      "language": "Taal"
+      "language": "Taal",
+      "change_country_accessibility_text": "Land of valuta wijzigen",
+      "change_language_accessibility_text": "Taal wijzigen"
     },
     "privacy_bar": {
       "accept": "Accepteren",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Accountpagina",
-      "open_menu": "Navigatiemenu openen",
-      "open_search": "Zoeken openen",
-      "open_account": "Accountpagina openen",
-      "open_cart": "Winkelwagen openen"
+      "account": "Account",
+      "login": "Inloggen",
+      "menu": "Menu",
+      "search": "Zoeken",
+      "cart": "Winkelwagen"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Aantal",
       "increase_quantity": "Aantal verhogen",
-      "decrease_quantity": "Aantal verlagen"
+      "decrease_quantity": "Aantal verlagen",
+      "minimum_of": "Minimum van {{ min }}",
+      "maximum_of": "Maximum van {{ max }}",
+      "increment_of": "Verhoging van {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Volumeprijsstelling",
+      "minimum": "Meer dan {{ quantity }}",
+      "price_at_each": "{{ price }}\/st."
     },
     "rating_count": {
       "zero": "Geen recensies",
@@ -297,6 +307,10 @@
     "general": {
       "title": "Winkelwagen",
       "empty": "Je winkelwagen is leeg",
+      "item_count": {
+        "one": "{{ count }} artikel",
+        "other": "{{ count }} artikelen"
+      },
       "continue_shopping": "Doorgaan met winkelen",
       "weight": "Gewicht",
       "subtotal": "Subtotaal",
@@ -320,7 +334,8 @@
       "change_quantity": "Aantal wijzigen",
       "increase_quantity": "Aantal verhogen",
       "decrease_quantity": "Aantal verlagen",
-      "remove": "Verwijderen"
+      "remove": "Verwijderen",
+      "remove_with_title": "Verwijder {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Besteed {{ remaining_amount }} meer en krijg gratis verzending!",

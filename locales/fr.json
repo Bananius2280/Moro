@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Pays",
-      "language": "Langue"
+      "language": "Langue",
+      "change_country_accessibility_text": "Changer de pays ou de devise",
+      "change_language_accessibility_text": "Changer de langue"
     },
     "privacy_bar": {
       "accept": "Accepter",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Mon compte",
-      "open_menu": "Ouvrir la navigation",
-      "open_search": "Ouvrir la recherche",
-      "open_account": "Ouvrir le compte utilisation",
-      "open_cart": "Voir le panier"
+      "account": "Compte",
+      "login": "Connexion",
+      "menu": "Menu",
+      "search": "Recherche",
+      "cart": "Panier"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Quantité",
       "increase_quantity": "Augmenter la quantité",
-      "decrease_quantity": "Diminuer la quantité"
+      "decrease_quantity": "Diminuer la quantité",
+      "minimum_of": "Minimum de {{ min }}",
+      "maximum_of": "Maximum de {{ max }}",
+      "increment_of": "Incrément de {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Tarification basée sur le volume",
+      "minimum": "{{ quantity }} ou plus",
+      "price_at_each": "à {{ price }}\/pièce"
     },
     "rating_count": {
       "zero": "Aucun avis",
@@ -200,7 +210,7 @@
       "welcome": "Bienvenue, {{first_name}}",
       "tagline": "Accédez à vos commandes et configurez votre compte.",
       "orders": "Commandes",
-      "addresses": "Addresses",
+      "addresses": "Adresses",
       "logout": "Déconnexion",
       "no_orders": "Vous n'avez effectué aucune commande.",
       "continue_shopping": "Explorer nos produits"
@@ -297,6 +307,10 @@
     "general": {
       "title": "Panier",
       "empty": "Votre panier est vide",
+      "item_count": {
+        "one": "{{ count }} article",
+        "other": "{{ count }} articles"
+      },
       "continue_shopping": "Explorer nos produits",
       "weight": "Poids",
       "subtotal": "Sous-total",
@@ -320,7 +334,8 @@
       "change_quantity": "Changer la quantité",
       "increase_quantity": "Augmenter la quantité",
       "decrease_quantity": "Diminuer la quantité",
-      "remove": "Supprimer"
+      "remove": "Supprimer",
+      "remove_with_title": "Supprimer {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Dépensez {{ remaining_amount }} de plus pour bénéficier des frais de livraison offerts.",

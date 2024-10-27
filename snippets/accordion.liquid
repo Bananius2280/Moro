@@ -12,6 +12,7 @@ Supported parameters
 
 * title: the title to use for the toggle button
 * icon: an optional icon attached to the title
+* icon_width: an optional icon width (only work for image icons)
 * content: the hidden content inside the accordion
 * open: if set to true the accordion is open by default
 * size: if set to "lg", the font is and spacing is bigger
@@ -25,7 +26,16 @@ Supported parameters
     <div class="accordion__toggle bold">
       {%- if icon -%}
         <div class="text-with-icon">
-          {%- render 'icon' with icon -%}
+          {%- if icon.src != blank -%}
+            {% capture icon_sizes %}{{ icon_width | default: 20 }}px{%- endcapture -%}
+            {% capture icon_widths %}{{ icon_width }},{{ icon_width | times: 2 }},{{ icon_width | times: 3 }}{%- endcapture -%}
+            {% capture icon_style %}--image-max-width: {{ icon_sizes }}{%- endcapture -%}
+
+            {{- icon | image_url: width: icon.width | image_tag: loading: 'lazy', sizes: icon_sizes, widths: icon_widths, style: icon_style -}}
+          {%- else -%}
+            {%- render 'icon' with icon, width: icon_width -%}
+          {%- endif -%}
+
           <span {% if size == 'lg' %}class="h6"{% endif %}>{{- title | escape -}}</span>
         </div>
       {%- else -%}
@@ -38,97 +48,5 @@ Supported parameters
 
   <div class="accordion__content">
     {{- content -}}
-    {% assign metafields_names = '' %}
-    {% assign metafields_names = metafields_names | append: 'kolir=Колір' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'rozmir=Розмір' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'gabariti_viroba_vkhshkhg=Габарити вироба (ВхШхГ)' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'gabariti=Габарити' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'shchilnist_paperu=Щільність паперу' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'shirina__sm=Ширина, см' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'shirina=Ширина' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'tip_lampi__shcho_vikoristovuetsia=Тип лампи, що використовується' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'forma=Форма' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'tip_zhivlennia=Тип живлення' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'tip_dzherela_svitla=Тип джерела світла' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'tip=Тип' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'tematika=Тематика' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'sklad=Склад' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'rozmishchennia=Розміщення' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'sistema_zhivlennia=Система живлення' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'rozmir_prostiradla__sm=Розмір простирадла, см' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'rozmir_pidkovdri_sm=Розмір підковдри,см' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'rozmir_navolochki_sm=Розмір наволочки,см' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'rozmir=Розмір' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'rozmr_arkusha=Розмiр аркуша' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'priznachennia=Призначення' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'osoblivosti=Особливості' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'pidsvitka=Підсвітка' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'osnovnii_kolir=Основний колір' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'naiavnist_aromatu=Наявність аромату' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'napruga=Напруга' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'napovniuvach=Наповнювач' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'material_ruchki=Матеріал ручки' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'mozhna_miti_v_posudomiitci=Можна мити в посудомийці' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'material_napovniuvacha=Матеріал наповнювача' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'material_krishki=Матеріал кришки' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'material_korpusu=Матеріал корпусу' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'material_kolbi=Матеріал колби' | append: ';' %}
-    
-    {% assign metafields_names = metafields_names | append: 'lniuvannia=Лiнiювання' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'material=Матеріал' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kriplennia=Кріплення' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kriina_virobnik=Країна виробник' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kraina_reestratcii_brendu=Країна реєстрації бренду' | append: ';' %} 
-    {% assign metafields_names = metafields_names | append: 'kraina_reestratciii_brendu=Країна реєстрації бренду' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kraina_virobnik=Країна виробник' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kolir_svitla=Колір світла' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kolr_paperovogo_bloku=Колiр паперового блоку' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kolr_obkladenki=Колiр обкладенки' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kilkist_stikeriv=Кількість стікерів' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kilkist_rizhuchikh__poverkhon_shcho_trut=Кількість ріжучих / поверхонь що труть' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kilkist=Кількість' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kilkist_v_upakovt=Кількість в упаковці' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'kategoriia=Категорія' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'klkst_arkushiv=Кiлькiсть аркушів' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'zovnishnii_material=Зовнішній матеріал' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'zastibka=Застібка' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'zhivlennia=Живлення' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'dod__kharakteristiki=Дод. характеристики' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'dovzhina__sm=Довжина, см' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'dovzhina=Довжина' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'dekor=Декор' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'diametr=Діаметр' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'garantiia=Гарантія' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'vkhidna_napruga=Вхідна напруга' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'visota_sm=Висота,см' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'visota_igrashki_sm=Висота іграшки (см)' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'virobnik=Виробник' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'visota=Висота' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'vid_masazhu=Вид масажу' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'vid=Вид' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'vaga=Вага' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'v_kompleti=В комплекті' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'v_komplekti=В комплекті' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'bred=Бренд' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'brend=Бренд' | append: ';' %}
-    {% assign metafields_names = metafields_names | append: 'aromat=Аромат' %}
-
-    {% assign metafields_names_array = metafields_names | split: ';' %}
-
-    {% if product.metafields.trm_1c %}
-      {% for field in product.metafields.trm_1c %}
-        {% for meta_translate in metafields_names_array %}
-          {% assign meta_key_value = meta_translate | split: '=' %}
-          {% if meta_key_value.first == field.first %}
-            {% comment %} <dl style="display: flex;">
-              <dt>{{ meta_key_value.last }}:</dt>
-              <dd>{{ field.last }}</dd>
-            </dl> {% endcomment %}
-            <span class="accordion__content-metafield">{{ meta_key_value.last }}: {{ field.last }}</span>
-            {% break %}
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    {% endif %}
   </div>
 </details>

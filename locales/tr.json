@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Ülke",
-      "language": "Dil"
+      "language": "Dil",
+      "change_country_accessibility_text": "Ülkeyi veya para birimini değiştir",
+      "change_language_accessibility_text": "Dili değiştir"
     },
     "privacy_bar": {
       "accept": "Kabul Et",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Hesap sayfasını aç",
-      "open_menu": "Navigasyon menüsünü aç",
-      "open_search": "Aramayı aç",
-      "open_account": "Hesap sayfasını aç",
-      "open_cart": "Sepeti aç"
+      "account": "Hesap",
+      "login": "Giriş yap",
+      "menu": "Menü",
+      "search": "Ara",
+      "cart": "Sepet"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Miktar",
       "increase_quantity": "Miktarı artır",
-      "decrease_quantity": "Miktarı azalt"
+      "decrease_quantity": "Miktarı azalt",
+      "minimum_of": "{{ min }} en az",
+      "maximum_of": "{{ max }} en fazla",
+      "increment_of": "{{ step }} artış"
+    },
+    "volume_pricing": {
+      "title": "Toplu Alım Bazlı Fiyatlandırma",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "{{ price }}\/adet"
     },
     "rating_count": {
       "zero": "Değerlendirme yok",
@@ -297,6 +307,9 @@
     "general": {
       "title": "Sepet",
       "empty": "Sepetiniz boş",
+      "item_count": {
+        "other": "{{ count }} ürün"
+      },
       "continue_shopping": "Alışverişe devam edin",
       "weight": "Ağırlık",
       "subtotal": "Ara toplam",
@@ -320,7 +333,8 @@
       "change_quantity": "Miktarı değiştir",
       "increase_quantity": "Miktarı artır",
       "decrease_quantity": "Miktarı azalt",
-      "remove": "Kaldır"
+      "remove": "Kaldır",
+      "remove_with_title": "{{ title }} kaldır"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "{{ remaining_amount }} daha harcayın ve ücretsiz gönderi kazanın!",

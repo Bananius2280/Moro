@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Země",
-      "language": "Jazyk"
+      "language": "Jazyk",
+      "change_country_accessibility_text": "Změnit zemi nebo měnu",
+      "change_language_accessibility_text": "Změnit jazyk"
     },
     "privacy_bar": {
       "accept": "Přijmout",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "účtu",
-      "open_menu": "Otevřít navigační menu",
-      "open_search": "Otevřít vyhledávání",
-      "open_account": "Otevřít stránku účtu",
-      "open_cart": "Otevřít košík"
+      "account": "Účet",
+      "login": "Přihlášení",
+      "menu": "Nabídka",
+      "search": "Hledat",
+      "cart": "Košík"
     }
   },
   "product": {
@@ -106,7 +108,15 @@
     "quantity": {
       "label": "Množství",
       "increase_quantity": "Zvýšit množství",
-      "decrease_quantity": "Snížit množství"
+      "decrease_quantity": "Snížit množství",
+      "minimum_of": "Minimálně {{ min }}",
+      "maximum_of": "Maximálně {{ max }}",
+      "increment_of": "Přírůstek o {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Ceny s objemovou slevou",
+      "minimum": "{{ quantity }} a více",
+      "price_at_each": "{{ price }} \/ ks"
     },
     "rating_count": {
       "zero": "Žádné recenze",
@@ -307,6 +317,11 @@
     "general": {
       "title": "Košík",
       "empty": "Váš košík je prázdný",
+      "item_count": {
+        "one": "{{ count }} položka",
+        "few": "{{ count }} položky",
+        "other": "{{ count }} položek"
+      },
       "continue_shopping": "Pokračovat v nákupu",
       "weight": "Hmotnost",
       "subtotal": "Mezisoučet",
@@ -330,7 +345,8 @@
       "change_quantity": "Změnit počet",
       "increase_quantity": "Zvýšit množství",
       "decrease_quantity": "Snížit množství",
-      "remove": "Odstranit"
+      "remove": "Odstranit",
+      "remove_with_title": "Odstranit {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Pokud nakoupíte za dalších {{ remaining_amount }}, získáte dopravu zdarma!",

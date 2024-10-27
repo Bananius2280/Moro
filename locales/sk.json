@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Krajina",
-      "language": "Jazyk"
+      "language": "Jazyk",
+      "change_country_accessibility_text": "Zmeniť krajinu alebo menu",
+      "change_language_accessibility_text": "Zmeniť jazyk"
     },
     "privacy_bar": {
       "accept": "Potvrdiť",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "účtu",
-      "open_menu": "Otvoriť navigačné menu",
-      "open_search": "Otvoriť vyhľadávanie",
-      "open_account": "Otvoriť stránku účtu",
-      "open_cart": "Otvoriť košík"
+      "account": "Účet",
+      "login": "Prihlásiť sa",
+      "menu": "Menu",
+      "search": "Hľadať",
+      "cart": "Košík"
     }
   },
   "product": {
@@ -107,7 +109,15 @@
     "quantity": {
       "label": "Množstvo",
       "increase_quantity": "Zvýšiť množstvo",
-      "decrease_quantity": "Znížiť množstvo"
+      "decrease_quantity": "Znížiť množstvo",
+      "minimum_of": "Minimálne {{ min }}",
+      "maximum_of": "Maximálne {{ max }}",
+      "increment_of": "Prírastok {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Objemové ceny",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "{{ price }}\/kus"
     },
     "rating_count": {
       "zero": "Zatiaľ žiadne hodnotenia",
@@ -308,6 +318,11 @@
     "general": {
       "title": "Košík",
       "empty": "Váš košík je prázdny",
+      "item_count": {
+        "one": "{{ count }} položka",
+        "few": "{{ count }} položky",
+        "other": "{{ count }} položiek"
+      },
       "continue_shopping": "Pokračovať v nákupe",
       "weight": "Hmotnosť",
       "subtotal": "Medzisúčet",
@@ -331,7 +346,8 @@
       "change_quantity": "Zmeniť množstvo",
       "increase_quantity": "Zvýšiť množstvo",
       "decrease_quantity": "Znížiť množstvo",
-      "remove": "Odstrániť"
+      "remove": "Odstrániť",
+      "remove_with_title": "Odstrániť {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Nakúpte ešte za {{ remaining_amount }} a získajte dopravu zdarma!",

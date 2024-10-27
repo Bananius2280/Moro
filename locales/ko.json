@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "국가",
-      "language": "언어"
+      "language": "언어",
+      "change_country_accessibility_text": "국가 또는 통화를 변경",
+      "change_language_accessibility_text": "언어 변경"
     },
     "privacy_bar": {
       "accept": "수락",
@@ -59,10 +61,10 @@
   "header": {
     "general": {
       "account": "계정",
-      "open_menu": "탐색 메뉴 열기",
-      "open_search": "검색 열기",
-      "open_account": "계정 페이지 열기",
-      "open_cart": "장바구니 열기 "
+      "login": "로그인",
+      "menu": "메뉴",
+      "search": "검색",
+      "cart": "장바구니"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "수량",
       "increase_quantity": "수량 늘리기",
-      "decrease_quantity": "수량 줄이기"
+      "decrease_quantity": "수량 줄이기",
+      "minimum_of": "최소 {{ min }}",
+      "maximum_of": "최대 {{ max }}",
+      "increment_of": "증가 {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "수량별 가격 책정",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "개당 {{ price }}"
     },
     "rating_count": {
       "zero": "리뷰 없음",
@@ -297,6 +307,9 @@
     "general": {
       "title": "장바구니",
       "empty": "장바구니가 비어있습니다",
+      "item_count": {
+        "other": "{{ count }} 개 항목"
+      },
       "continue_shopping": "쇼핑 계속하기",
       "weight": "무게",
       "subtotal": "소계",
@@ -320,7 +333,8 @@
       "change_quantity": "수량 변경",
       "increase_quantity": "수량 늘리기",
       "decrease_quantity": "수량 줄이기",
-      "remove": "제거"
+      "remove": "제거",
+      "remove_with_title": "{{ title }} 제거"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "{{ remaining_amount }} 더 구매하면 배송료가 무료입니다!",

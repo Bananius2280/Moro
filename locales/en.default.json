@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Country",
-      "language": "Language"
+      "language": "Language",
+      "change_country_accessibility_text": "Change country or currency",
+      "change_language_accessibility_text": "Change language"
     },
     "privacy_bar": {
       "accept": "Accept",
@@ -59,10 +61,10 @@
   "header": {
     "general": {
       "account": "Account",
-      "open_menu": "Open navigation menu",
-      "open_search": "Open search",
-      "open_account": "Open account page",
-      "open_cart": "Open cart"
+      "login": "Login",
+      "menu": "Menu",
+      "search": "Search",
+      "cart": "Cart"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Quantity",
       "increase_quantity": "Increase quantity",
-      "decrease_quantity": "Decrease quantity"
+      "decrease_quantity": "Decrease quantity",
+      "minimum_of": "Minimum of {{ min }}",
+      "maximum_of": "Maximum of {{ max }}",
+      "increment_of": "Increment of {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Volume pricing",
+      "minimum": "{{ minimum_quantity }}+",
+      "price_at_each": "{{ price }}\/ea"
     },
     "rating_count": {
       "zero": "No reviews",
@@ -297,6 +307,11 @@
     "general": {
       "title": "Cart",
       "empty": "Your cart is empty",
+      "item_count": {
+        "zero": "{{ count }} items",
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      },
       "continue_shopping": "Continue shopping",
       "weight": "Weight",
       "subtotal": "Subtotal",
@@ -320,7 +335,8 @@
       "change_quantity": "Change quantity",
       "increase_quantity": "Increase quantity",
       "decrease_quantity": "Decrease quantity",
-      "remove": "Remove"
+      "remove": "Remove",
+      "remove_with_title": "Remove {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Spend {{ remaining_amount }} more and get free shipping!",

@@ -31,7 +31,7 @@ Supported variables
   {%- assign card_class = 'product-card product-card--blends' -%}
 {%- endif -%}
 
-<product-card {% if reveal %}reveal-js{% endif %} {% render 'surface', class: card_class, background: card_background, text_color: card_text_color %}>
+<product-card {% if reveal and settings.stagger_products_apparition %}reveal-js{% endif %} {% render 'surface', class: card_class, background: card_background, text_color: card_text_color %}>
   <div class="product-card__figure">
     {{- placeholder_image | placeholder_svg_tag: 'product-card__image placeholder' -}}
   </div>

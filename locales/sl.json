@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Država",
-      "language": "Jezik"
+      "language": "Jezik",
+      "change_country_accessibility_text": "Spremeni državo ali valuto",
+      "change_language_accessibility_text": "Spremeni jezik"
     },
     "privacy_bar": {
       "accept": "Sprejmi",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "Računom",
-      "open_menu": "Odpri meni za krmarjenje",
-      "open_search": "Odpri iskanje",
-      "open_account": "Odpri stran z računom",
-      "open_cart": "Odpri nakupovalno košarico"
+      "account": "Račun",
+      "login": "Prijava",
+      "menu": "Meni",
+      "search": "Iskanje",
+      "cart": "Košarica"
     }
   },
   "product": {
@@ -106,7 +108,15 @@
     "quantity": {
       "label": "Količina",
       "increase_quantity": "Povečaj količino",
-      "decrease_quantity": "Zmanjšaj količino"
+      "decrease_quantity": "Zmanjšaj količino",
+      "minimum_of": "Najmanj {{ min }}",
+      "maximum_of": "Največ {{ max }}",
+      "increment_of": "Povečanje za {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Količinski popust",
+      "minimum": "{{ quantity }} in več",
+      "price_at_each": "po ceni {{ price }}\/kos"
     },
     "rating_count": {
       "zero": "Ni mnenj",
@@ -307,6 +317,12 @@
     "general": {
       "title": "Košarica",
       "empty": "Vaša košarica je prazna",
+      "item_count": {
+        "one": "{{ count }} izdelek",
+        "two": "{{ count }} izdelka",
+        "few": "{{ count }} izdelki",
+        "other": "{{ count }} izdelkov"
+      },
       "continue_shopping": "Nadaljuj z nakupovanjem",
       "weight": "Teža",
       "subtotal": "Vmesna vsota",
@@ -330,7 +346,8 @@
       "change_quantity": "Spremeni količino",
       "increase_quantity": "Povečaj količino",
       "decrease_quantity": "Zmanjšaj količino",
-      "remove": "Odstrani"
+      "remove": "Odstrani",
+      "remove_with_title": "Odstrani {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Dodajte še za {{ remaining_amount }} izdelkov in izkoristite brezplačno poštnino!",

@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Страна",
-      "language": "Язык"
+      "language": "Язык",
+      "change_country_accessibility_text": "Изменить страну или валюту",
+      "change_language_accessibility_text": "Изменить язык"
     },
     "privacy_bar": {
       "accept": "Принять",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "аккаунта",
-      "open_menu": "Открыть меню навигации",
-      "open_search": "Открыть поиск",
-      "open_account": "Открыть страницу аккаунта",
-      "open_cart": "Открыть корзину"
+      "account": "Аккаунт",
+      "login": "Войти",
+      "menu": "Меню",
+      "search": "Поиск",
+      "cart": "Корзина"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Количество",
       "increase_quantity": "Увеличить количество",
-      "decrease_quantity": "Уменьшить количество"
+      "decrease_quantity": "Уменьшить количество",
+      "minimum_of": "Минимум {{ min }}",
+      "maximum_of": "Максимум {{ max }}",
+      "increment_of": "Шаг {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Оптовая цена",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "{{ price }}\/кажд."
     },
     "rating_count": {
       "zero": "Нет отзывов",
@@ -297,6 +307,12 @@
     "general": {
       "title": "Корзина",
       "empty": "Корзина пуста",
+      "item_count": {
+        "one": "{{ count }} предмет",
+        "few": "{{ count }} предмета",
+        "many": "{{ count }} предметов",
+        "other": "{{ count }} предмет"
+      },
       "continue_shopping": "Продолжить покупки",
       "weight": "Вес",
       "subtotal": "Промежуточный итог",
@@ -320,7 +336,8 @@
       "change_quantity": "Изменить количество",
       "increase_quantity": "Увеличить количество",
       "decrease_quantity": "Уменьшить количество",
-      "remove": "Удалить"
+      "remove": "Удалить",
+      "remove_with_title": "Удалить {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Потратьте еще {{ remaining_amount }}, и мы доставим заказ бесплатно!",

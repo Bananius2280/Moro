@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Χώρα",
-      "language": "Γλώσσα"
+      "language": "Γλώσσα",
+      "change_country_accessibility_text": "Αλλαγή χώρας ή νομίσματος",
+      "change_language_accessibility_text": "Αλλαγή γλώσσας"
     },
     "privacy_bar": {
       "accept": "Αποδοχή",
@@ -58,11 +60,11 @@
   },
   "header": {
     "general": {
-      "account": "λογαριασμού",
-      "open_menu": "Άνοιγμα μενού πλοήγησης",
-      "open_search": "Άνοιγμα αναζήτησης",
-      "open_account": "Άνοιγμα σελίδας λογαριασμού",
-      "open_cart": "Άνοιγμα καλαθιού"
+      "account": "Λογαριασμός",
+      "login": "Σύνδεση",
+      "menu": "Μενού",
+      "search": "Αναζήτηση",
+      "cart": "Καλάθι"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Ποσότητα",
       "increase_quantity": "Αύξηση ποσότητας",
-      "decrease_quantity": "Μείωση ποσότητας"
+      "decrease_quantity": "Μείωση ποσότητας",
+      "minimum_of": "Ελάχιστο {{ min }}",
+      "maximum_of": "Μέγιστο {{ max }}",
+      "increment_of": "Αύξηση κατά {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Τιμολόγηση βάσει ποσότητας",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "στα {{ price }}\/τμχ"
     },
     "rating_count": {
       "zero": "Δεν υπάρχουν αξιολογήσεις",
@@ -297,6 +307,10 @@
     "general": {
       "title": "Καλάθι",
       "empty": "Το καλάθι σας είναι άδειο",
+      "item_count": {
+        "one": "{{ count }} αντικείμενο",
+        "other": "{{ count }} αντικείμενα"
+      },
       "continue_shopping": "Συνεχίστε τις αγορές σας",
       "weight": "Βάρος",
       "subtotal": "Υποσύνολο",
@@ -320,7 +334,8 @@
       "change_quantity": "Αλλαγή ποσότητας",
       "increase_quantity": "Αύξηση ποσότητας",
       "decrease_quantity": "Μείωση ποσότητας",
-      "remove": "Αφαίρεση"
+      "remove": "Αφαίρεση",
+      "remove_with_title": "Αφαίρεση {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Ξοδέψτε ακόμα {{ remaining_amount }} και κερδίστε δωρεάν αποστολή!",

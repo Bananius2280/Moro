@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Paese\/Area geografica",
-      "language": "Lingua"
+      "language": "Lingua",
+      "change_country_accessibility_text": "Cambia paese o valuta",
+      "change_language_accessibility_text": "Cambia lingua"
     },
     "privacy_bar": {
       "accept": "Accetta",
@@ -59,10 +61,10 @@
   "header": {
     "general": {
       "account": "Account",
-      "open_menu": "Apri il menu di navigazione",
-      "open_search": "Mostra il menu di ricerca",
-      "open_account": "Mostra account",
-      "open_cart": "Mostra il carrello"
+      "login": "Accedi",
+      "menu": "Menù",
+      "search": "Cerca",
+      "cart": "Carrello"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Quantità",
       "increase_quantity": "Aumenta quantità",
-      "decrease_quantity": "Diminuisci quantità"
+      "decrease_quantity": "Diminuisci quantità",
+      "minimum_of": "Minimo di {{ min }}",
+      "maximum_of": "Massimo di {{ max }}",
+      "increment_of": "Incremento di {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Prezzi basati sui volumi",
+      "minimum": "Più di {{ quantity }}",
+      "price_at_each": "a {{ price }}\/ciascuno"
     },
     "rating_count": {
       "zero": "Nessuna recensione",
@@ -297,6 +307,10 @@
     "general": {
       "title": "Carrello",
       "empty": "Il tuo carrello è vuoto",
+      "item_count": {
+        "one": "{{ count }} articolo",
+        "other": "{{ count }} articoli"
+      },
       "continue_shopping": "Continua gli acquisti",
       "weight": "Peso",
       "subtotal": "Subtotale",
@@ -320,7 +334,8 @@
       "change_quantity": "Modifica quantità",
       "increase_quantity": "Aumenta quantità",
       "decrease_quantity": "Diminuisci quantità",
-      "remove": "Rimuovi"
+      "remove": "Rimuovi",
+      "remove_with_title": "Rimuovi {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Ti mancano {{ remaining_amount }} per ottenere la spedizione gratuita!",

@@ -37,7 +37,9 @@
     },
     "localization": {
       "country": "Країна",
-      "language": "Мова"
+      "language": "Мова",
+      "change_country_accessibility_text": "Змінити країну або валюту",
+      "change_language_accessibility_text": "Змінити мову"
     },
     "privacy_bar": {
       "accept": "Прийняти",
@@ -59,10 +61,10 @@
   "header": {
     "general": {
       "account": "Особистий кабінет",
-      "open_menu": "Відкрити меню навігації",
-      "open_search": "Відкрити пошук",
-      "open_account": "Відкрити сторінку акаунта",
-      "open_cart": "Відкрити кошик"
+      "login": "Увійти",
+      "menu": "Меню",
+      "search": "Пошук",
+      "cart": "Кошик"
     }
   },
   "product": {
@@ -104,7 +106,15 @@
     "quantity": {
       "label": "Кількість",
       "increase_quantity": "Збільшити кількість",
-      "decrease_quantity": "Зменшити кількість"
+      "decrease_quantity": "Зменшити кількість",
+      "minimum_of": "Мінімум {{ min }}",
+      "maximum_of": "Максимум {{ max }}",
+      "increment_of": "Приріст на {{ step }}"
+    },
+    "volume_pricing": {
+      "title": "Оптовая цена",
+      "minimum": "{{ quantity }}+",
+      "price_at_each": "{{ price }}\/кажд."
     },
     "rating_count": {
       "zero": "Немає відгуків",
@@ -297,6 +307,12 @@
     "general": {
       "title": "Кошик",
       "empty": "Ваш кошик пустий",
+      "item_count": {
+        "one": "{{ count }} предмет",
+        "few": "{{ count }} предмети",
+        "many": "{{ count }} предметів",
+        "other": "{{ count }} предмет"
+      },
       "continue_shopping": "Продовжити покупки",
       "weight": "Вага",
       "subtotal": "Проміжний підсумок",
@@ -320,7 +336,8 @@
       "change_quantity": "Змінити кількість",
       "increase_quantity": "Збільшити кількість",
       "decrease_quantity": "Зменшити кількість",
-      "remove": "Вилучити"
+      "remove": "Вилучити",
+      "remove_with_title": "Видалити {{ title }}"
     },
     "free_shipping_bar": {
       "limit_unreached_html": "Витратьте ще {{ remaining_amount }} та отримайте безкоштовну доставку!",
@@ -576,7 +593,8 @@
         }
       },
       "delivery_options": {
-        "shipping_address": "Адреса доставки"
+        "shipping_address": "Адреса доставки",
+        "free_total_label": "За тарифами Нової пошти"
       },
       "shop_policies": {
         "refund_policy": "Політика відшкодування",
