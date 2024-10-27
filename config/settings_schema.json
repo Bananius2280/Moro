@@ -753,6 +753,81 @@
     ]
   },
   {
+    "name": "Нова пошта",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Ключ API"
+      },
+      {
+        "type": "text",
+        "id": "np_api_key",
+        "label": "API Key",
+        "default": "b1f5b7037b014d51104c713582797159"
+      },
+      {
+        "type": "header",
+        "content": "Міста для швидкого пошуку"
+      },
+      {
+        "type": "text",
+        "id": "quick_city_index",
+        "label": "Введіть індекси міст через пробіл",
+        "default": "01001 79007 65037 61001 49000"
+      },
+      {
+        "type": "text",
+        "id": "atc_selector",
+        "label": "Селектор кнопки AddToCart",
+        "default": ".product-form__submit"
+      },
+      {
+        "type": "header",
+        "content": "Інтеграція в боковий кошик"
+      },
+      {
+        "type": "text",
+        "id": "drawer_selector",
+        "label": "Батьківський селектор бокового кошика",
+        "default": "cart-drawer"
+      },
+      {
+        "type": "text",
+        "id": "drawer_widget_parent_selector",
+        "label": "Батьківський селектор для віджета",
+        "default": ".drawer__footer"
+      },
+      {
+        "type": "text",
+        "id": "drawer_button_selector",
+        "label": "Селектор кнопки Checkout",
+        "default": ".cart__checkout-button"
+      },
+      {
+        "type": "header",
+        "content": "Інтеграція на сторінці кошика"
+      },
+      {
+        "type": "text",
+        "id": "cart_form_selector",
+        "label": "Батьківський селектор форми",
+        "default": ".cart__contents"
+      },
+      {
+        "type": "text",
+        "id": "cart_widget_parent_selector",
+        "label": "Батьківський селектор для віджета",
+        "default": ".cart__footer"
+      },
+      {
+        "type": "text",
+        "id": "cart_button_selector",
+        "label": "Селектор кнопки Checkout",
+        "default": ".cart__checkout-button"
+      }
+    ]
+  },
+  {
     "name": "Cart",
     "settings": [
       {
